@@ -16,8 +16,8 @@ function getMovies() {
             console.error("Unable to fetch data:", error));
 }
 
-const filmesLista = JSON.parse(localStorage.getItem("filmesLista"));
-const filmesFavorito = JSON.parse(localStorage.getItem("filmesFavorito")) ;
+const filmesLista = JSON.parse(localStorage.getItem("filmesLista"))|| [];
+const filmesFavorito = JSON.parse(localStorage.getItem("filmesFavorito")) || [];
 
 function CriarFilmes(filmes) {
     let cartao = document.getElementById("Cartao");
@@ -34,6 +34,7 @@ function CriarFilmes(filmes) {
             let generoProcurado = filtroselect === "Todos" || filme.genero.includes(filtroselect);
             return TituloProcurado && generoProcurado;
         });
+        
         filmesFiltrados.forEach(filme => {
             if (window.location.pathname.endsWith("inicio.html")) {
                 CriarCartao(filme, cartao)

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFlix</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>UFlix</h1>
+        <nav>
+            <ul>
+                <li><a href="./inicio.html"><u>Início</u></a></li>
+                <li><a href="./MinhaLista.html">Minha Lista</a></li>
+                <li><a href="./Favoritos.html">Favoritos</a></li>
+                <input type="text" placeholder="Nome do Filme" id="Procurartxt">
+                <select name="TipoGasto" id="ProcurarCategoria">
+                    <option value="Todos">Todos</option>
+                    <option value="Ação">Ação</option>
+                    <option value="Aventura">Aventura</option>
+                    <option value="Animação">Animação</option>
+                    <option value="Comédia">Comédia</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Fantasia">Fantasia</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Ficção Científica">Ficção Científica</option>
+                    <option value="Biografia">Biografia</option>
+                    <option value="Mistério">Mistério</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Thriller">Thriller</option>
+                    
+                </select>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <h2>Filmes</h2>
+            <div id="Cartao" class="grid">
+                <Script>getMovies()</Script>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

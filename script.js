@@ -16,7 +16,7 @@ function getMovies() {
             console.error("Unable to fetch data:", error));
 }
 
-const filmesLista = JSON.parse(localStorage.getItem("filmesLista"))|| [];
+const filmesLista = JSON.parse(localStorage.getItem("filmesLista")) || [];
 const filmesFavorito = JSON.parse(localStorage.getItem("filmesFavorito")) || [];
 
 function CriarFilmes(filmes) {
@@ -122,11 +122,11 @@ function CriarCartao(filme, cartao) {
     FilmeCartao.append(Poster, IconLista, Detalhes);
 
     Poster.addEventListener("click", function Assistir(){
-        window.location.href = `./AssistirFilme.html?filme=${encodeURIComponent(filme.titulo)}`;
+        window.location.href = `./AssistirFilme.html?filme=${filme.titulo}`;
         
     });
     Detalhes.addEventListener("click", function Assistir(){
-        window.location.href = `./AssistirFilme.html?filme=${encodeURIComponent(filme.titulo)}`;
+        window.location.href = `./AssistirFilme.html?filme=${filme.titulo}`;
         
     });
     cartao.appendChild(FilmeCartao);

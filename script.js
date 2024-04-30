@@ -71,19 +71,19 @@ function CriarCartao(filme, cartao) {
 
     let IconLista = document.createElement("img");
     if (filmesLista.includes(Titulo.textContent)) {
-        IconLista.src = "./img/IconMarcado.png";
+        IconLista.src = "./IconMarcado.png";
     } else {
-        IconLista.src = "./img/IconNaoMarcado.png";
+        IconLista.src = "./IconNaoMarcado.png";
     }
 
     IconLista.id = "Bandeira";
     IconLista.addEventListener("click", function() {
         if (IconLista.src.endsWith("IconNaoMarcado.png")) {
-            IconLista.src = "./img/IconMarcado.png";
+            IconLista.src = "./IconMarcado.png";
             filmesLista.push(Titulo.textContent);
             localStorage.setItem("filmesLista", JSON.stringify(filmesLista));
         } else {
-            IconLista.src = "./img/IconNaoMarcado.png";
+            IconLista.src = "./IconNaoMarcado.png";
             filmesLista.splice(filmesLista.indexOf(Titulo.textContent), 1);
             localStorage.setItem("filmesLista", JSON.stringify(filmesLista));
         }
@@ -143,19 +143,19 @@ function Favoritos(){
     
     IconFavorito.id = "Estrela"
     if (filmesFavorito.includes(H2Nome.textContent)) {
-        IconFavorito.src = "./img/EstrelaCheia.png";
+        IconFavorito.src = "./EstrelaCheia.png";
     } else {
-        IconFavorito.src = "./img/EstrelaVazia.png";
+        IconFavorito.src = "./EstrelaVazia.png";
     }
 
 
     IconFavorito.addEventListener("click", function() {
         if (IconFavorito.src.endsWith("EstrelaVazia.png")) {
-            IconFavorito.src = "./img/EstrelaCheia.png";
+            IconFavorito.src = "./EstrelaCheia.png";
             filmesFavorito.push(H2Nome.textContent);
             localStorage.setItem("filmesFavorito", JSON.stringify(filmesFavorito));
         } else {
-            IconFavorito.src = "./img/EstrelaVazia.png";
+            IconFavorito.src = "./EstrelaVazia.png";
             filmesFavorito.splice(filmesFavorito.indexOf(H2Nome.textContent), 1);
             localStorage.setItem("filmesFavorito", JSON.stringify(filmesFavorito));
         }
